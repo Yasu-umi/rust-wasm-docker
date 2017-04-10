@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rust to WebAssembly example</title>
+</head>
+<body>
+<script>
+var Module = {};
+fetch('/tmp/hello.wasm')
+.then((response) => response.arrayBuffer())
+.then((buffer) => {
+  Module.wasmBinary = buffer;
+  var script = document.createElement('script');
+  script.src = "/tmp/hello.js";
+  document.body.appendChild(script);
+});
+</script>
+</body>
+</html>
