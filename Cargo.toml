@@ -3,6 +3,14 @@ name = "rust-wasm-docker"
 version = "0.1.0"
 authors = ["Yasu_umiNishikawa <yasu.umi.19910101@gmail.com>"]
 
+
+[dependencies]
+emval = { git = "https://github.com/hajifkd/emval-rs.git" }
+
 [[bin]]
 name = "hello"
 path = "examples/hello/main.rs"
+
+[[bin]]
+name = "emval"
+path = "examples/emval/main.rs"

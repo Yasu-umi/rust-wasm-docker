@@ -19,3 +19,5 @@ python -m SimpleHTTPServer
 ```
 
 ・Third, Open http://localhost:8000/examples/hello.html & Check Console
+
+・Additional, example of call js from rust with https://github.com/hajifkd/emval-rs

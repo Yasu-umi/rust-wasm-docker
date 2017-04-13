@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rust to WebAssembly with emval-rs example</title>
+</head>
+<body>
+<script>
+var Module = {};
+fetch('/tmp/emval.wasm')
+.then((response) => response.arrayBuffer())
+.then((buffer) => {
+  Module.wasmBinary = buffer;
+  var script = document.createElement('script');
+  script.src = "/tmp/emval.js";
+  document.body.appendChild(script);
+});
+</script>
+</body>
+</html>
